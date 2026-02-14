@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Why choose Vudy for your LFP battery and solar system."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Why Vudy? - Energy Independence Simplified</title><style>*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}:root{--font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;--font-mono: "Fira Code", "JetBrains Mono", monospace;--max-width: 72rem;--gap: 1.5rem}html{font-family:var(--font-sans);line-height:1.6;-webkit-font-smoothing:antialiased}body{min-height:100dvh;display:flex;flex-direction:column;background:#0f1a2e;color:#e0e0e0}main{flex:1;width:100%;max-width:100%;margin:0 auto;padding:0}img,video,svg{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:2px}header{background:linear-gradient(135deg,#0f1a2e,#1a2f4a);border-bottom:3px solid #ffd700;position:sticky;top:0;z-index:100}header nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-width);margin:0 auto;padding:1rem var(--gap)}header nav .site-name{font-weight:700;font-size:1.5rem;text-decoration:none;color:gold;letter-spacing:-.5px}header nav ul{display:flex;list-style:none;gap:1rem}header nav ul a{color:#e0e0e0;text-decoration:none;font-weight:600;transition:color .2s}header nav ul a:hover{color:gold}header nav ul a.active{background:linear-gradient(135deg,gold,#ffed4e);color:#0f1a2e;padding:.6rem 1.2rem;border-radius:24px;font-weight:700;transition:all .3s}header .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:6px;padding:8px}header .hamburger span{width:25px;height:3px;background:gold;border-radius:2px;transition:all .3s}header .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(10px,10px)}header .hamburger.active span:nth-child(2){opacity:0}header .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}@media(max-width:768px){header .hamburger{display:flex}header nav ul{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:linear-gradient(135deg,#0f1a2e,#1a2f4a);border-bottom:2px solid #ffd700;gap:0;max-height:0;overflow:hidden;transition:max-height .3s}header nav ul.active{max-height:300px}header nav ul li{padding:1rem 2rem;border-bottom:1px solid #333}header nav ul a{display:block}header nav ul a.active{background:linear-gradient(135deg,gold,#ffed4e);color:#0f1a2e;padding:.6rem 1.2rem;margin:0 .5rem;border-radius:24px}header nav ul .cta-link a{color:gold;font-weight:700}}footer{text-align:center;padding:2rem var(--gap);color:#b0b0b0;border-top:2px solid #ffd700;font-size:.875rem}.prose{max-width:65ch;margin:0 auto}.prose h1,.prose h2,.prose h3{margin-top:2rem;margin-bottom:.5rem;line-height:1.3}.prose p{margin-bottom:1rem}section{max-width:1200px;margin-left:auto;margin-right:auto}
+h1[data-astro-cid-yqiszuht]{text-align:center;margin-bottom:2rem;font-size:2.5rem}.content[data-astro-cid-yqiszuht]{max-width:700px;margin:0 auto 4rem;line-height:1.8}.content[data-astro-cid-yqiszuht] h2[data-astro-cid-yqiszuht]{color:#2ecc71;margin-top:2rem;margin-bottom:1rem;font-size:1.5rem}.content[data-astro-cid-yqiszuht] p[data-astro-cid-yqiszuht]{margin-bottom:1rem;color:#333}.cta-section[data-astro-cid-yqiszuht]{text-align:center;background:#f0fdf4;padding:2rem;border-radius:8px;margin-top:2rem;border:2px solid #2ecc71}.cta-button[data-astro-cid-yqiszuht]{display:inline-block;padding:1rem 2rem;background:#2ecc71;color:#fff;text-decoration:none;border-radius:4px;font-weight:600;transition:background .2s}.cta-button[data-astro-cid-yqiszuht]:hover{background:#27ae60}
+</style></head> <body> <header> <nav class="navbar"> <a href="/" class="site-name">Vudy</a> <button class="hamburger" aria-label="Toggle menu"> <span></span> <span></span> <span></span> </button> <ul class="nav-menu"> <li><a href="./">Home</a></li><li><a href="./package/">The Package</a></li><li><a href="./why/">Why Vudy</a></li><li><a href="./contact/">Contact</a></li> <li class="cta-link"><a href="./#contact-form">Get Quote</a></li> </ul> </nav> </header> <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close menu when link clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  }
+
+  // Highlight active nav link
+  function setActiveLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-menu a:not(.cta-link a)');
+    
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      // Match if href is current path or if home (/) and we're at root
+      if (href === currentPath || (href === '/' && currentPath.match(/^\/(solerify|larify)\/?$/))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  setActiveLink();
+  window.addEventListener('popstate', setActiveLink);
+</script> <main>   <h1 data-astro-cid-yqiszuht>Why Vudy?</h1> <article class="content" data-astro-cid-yqiszuht> <h2 data-astro-cid-yqiszuht>One Complete Package</h2> <p data-astro-cid-yqiszuht>
+No guessing. No compromises. No "you need to buy this and that separately." 
+      We give you everything: 32kWh of LFP batteries, 800W of solar, and a complete electrical system. 
+      One package. One price. Done.
+</p> <h2 data-astro-cid-yqiszuht>Built by Someone Who Gets It</h2> <p data-astro-cid-yqiszuht>
+Vudy isn't owned by a corporation. It's built by someone who believes in energy independence. 
+      Someone who understands what it means to own your own power. That changes everything.
+</p> <h2 data-astro-cid-yqiszuht>LFP Technology, Not Outdated Lead-Acid</h2> <p data-astro-cid-yqiszuht>
+Old lead-acid batteries need constant maintenance, waste energy, and die after 5-7 years. 
+      LFP is different. It's safer, more efficient, and lasts 20+ years. We use the best technology available.
+</p> <h2 data-astro-cid-yqiszuht>32kWh Is Real Power</h2> <p data-astro-cid-yqiszuht>
+32kWh isn't a marketing number. It's enough to power an average household for a full day 
+      (depending on usage). Combined with 800W of solar, you have a system that works year-round.
+</p> <h2 data-astro-cid-yqiszuht>800W Solar Is Proven</h2> <p data-astro-cid-yqiszuht>
+Not oversized marketing. Not undersized penny-pinching. 800W solar is the sweet spot: 
+      It charges your 32kWh battery reliably while being cost-effective and installable on most properties.
+</p> <h2 data-astro-cid-yqiszuht>Professional Installation Included</h2> <p data-astro-cid-yqiszuht>
+We don't sell you hardware and wish you luck. We install it. We certify it. 
+      We make sure it works. You get a system you can trust.
+</p> <h2 data-astro-cid-yqiszuht>Long-Term Support</h2> <p data-astro-cid-yqiszuht>
+10-year warranty. Annual maintenance. 24/7 support. We're here when you need us. 
+      This isn't a one-time transaction—it's a relationship.
+</p> <h2 data-astro-cid-yqiszuht>Energy Independence Actually Works</h2> <p data-astro-cid-yqiszuht>
+With Vudy, you stop paying electricity bills. You stop depending on the grid. 
+      You generate your own power. You store it. You use it. That's freedom.
+</p> <h2 data-astro-cid-yqiszuht>Simple. Direct. Honest.</h2> <p data-astro-cid-yqiszuht>
+No upselling. No complicated financing. No hidden fees. One package. One price. 
+      Everything you need. Nothing you don't.
+</p> <div class="cta-section" data-astro-cid-yqiszuht> <h2 data-astro-cid-yqiszuht>Ready to Get Off the Grid?</h2> <p data-astro-cid-yqiszuht>Contact us. Let's talk about your energy independence.</p> <a href="./contact/" class="cta-button" data-astro-cid-yqiszuht>Get Started</a> </div> </article>   </main> <footer> <p>© 2026 Vudy. Energy Independence.</p> </footer> </body></html> 

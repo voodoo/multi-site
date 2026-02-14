@@ -1,0 +1,96 @@
+---
+import BaseLayout from '../../shared/layouts/BaseLayout.astro';
+import Header from '../../shared/components/Header.astro';
+import Footer from '../../shared/components/Footer.astro';
+
+const siteName = 'Voody';
+const nav = [
+  { label: 'Home', href: './' },
+  { label: 'Contact', href: './contact/' },
+];
+---
+
+<BaseLayout title="Voody - Paul Vudmaska" description="Rails developer, problem solver, builder.">
+  <Header slot="header" siteName={siteName} nav={nav} />
+  
+  <section class="hero">
+    <h1>Paul Vudmaska</h1>
+    <p class="tagline">Rails developer. Problem solver. Builder.</p>
+  </section>
+
+  <section class="bio">
+    <div class="bio-content">
+      <p>60 years old. Veteran Rails developer with decades of experience building systems that work. Survived a stroke and bypass surgery — still here, still building.</p>
+      <p>I solve problems. I build things. If you need help, let's talk.</p>
+    </div>
+  </section>
+
+  <section class="cta">
+    <a href="./contact/" class="cta-button">Action</a>
+  </section>
+
+  <Footer slot="footer" copyright="© 2026 Voody." />
+</BaseLayout>
+
+<style>
+  .hero {
+    text-align: center;
+    padding: 4rem 2rem;
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    border-radius: 8px;
+    margin-bottom: 3rem;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .tagline {
+    font-size: 1.5rem;
+    opacity: 0.95;
+  }
+
+  .bio {
+    max-width: 700px;
+    margin: 0 auto 3rem;
+    padding: 2rem;
+    background: #f9f9f9;
+    border-radius: 8px;
+    border-left: 4px solid #3498db;
+  }
+
+  .bio-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .bio-content p:last-child {
+    margin-bottom: 0;
+  }
+
+  .cta {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2.5rem;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: transform 0.2s, background 0.2s;
+  }
+
+  .cta-button:hover {
+    transform: scale(1.05);
+    background: #2980b9;
+  }
+</style>

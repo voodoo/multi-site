@@ -1,0 +1,156 @@
+---
+import BaseLayout from '../../shared/layouts/BaseLayout.astro';
+import Header from '../../shared/components/Header.astro';
+import Footer from '../../shared/components/Footer.astro';
+
+const siteName = 'Vudy';
+const nav = [
+  { label: 'Home', href: './' },
+  { label: 'The Package', href: './package/' },
+  { label: 'Why Vudy', href: './why/' },
+  { label: 'Contact', href: './contact/' },
+];
+---
+
+<BaseLayout title="Vudy - The Package" description="32kWh LFP + 800W Solar + Electrical Panel">
+  <Header slot="header" siteName={siteName} nav={nav} />
+
+  <h1>The Vudy Package</h1>
+
+  <article class="content">
+    <div class="package-section">
+      <h2>🔋 32kWh LFP Battery Bank</h2>
+      <ul>
+        <li>Advanced Lithium Iron Phosphate technology</li>
+        <li>20+ year lifespan</li>
+        <li>Safe, reliable, low maintenance</li>
+        <li>Supports 3kW continuous load</li>
+        <li>Factory-assembled and tested</li>
+      </ul>
+    </div>
+
+    <div class="package-section">
+      <h2>☀️ 800W Solar Array</h2>
+      <ul>
+        <li>Two 400W monocrystalline panels</li>
+        <li>Roof or ground mount options</li>
+        <li>Professional-grade components</li>
+        <li>Year-round generation in most climates</li>
+        <li>MPPT charge controller included</li>
+      </ul>
+    </div>
+
+    <div class="package-section">
+      <h2>⚡ Complete Electrical Panel</h2>
+      <ul>
+        <li>400A main breaker</li>
+        <li>Pre-wired disconnect switches</li>
+        <li>Monitoring & metering included</li>
+        <li>Grid-tie or off-grid capable</li>
+        <li>Expandable for future upgrades</li>
+      </ul>
+    </div>
+
+    <div class="price-section">
+      <h2>Investment</h2>
+      <p class="price">$24,000 - $28,000</p>
+      <p>Includes: System design, installation, testing, and 1-year support.</p>
+    </div>
+
+    <div class="cta-section">
+      <h2>Ready to Go?</h2>
+      <p>Let's discuss your installation timeline and financing options.</p>
+      <a href="./contact/" class="cta-button">Request Quote</a>
+    </div>
+  </article>
+
+  <Footer slot="footer" copyright="© 2026 Vudy. Energy Independence." />
+</BaseLayout>
+
+<style>
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .content {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+  }
+
+  .package-section {
+    background: #f0fdf4;
+    border-left: 4px solid #2ecc71;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+
+  .package-section h2 {
+    margin-top: 0;
+    color: #2ecc71;
+  }
+
+  .package-section ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .package-section li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+  }
+
+  .package-section li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2ecc71;
+    font-weight: 700;
+  }
+
+  .price-section {
+    text-align: center;
+    background: #f9f9f9;
+    padding: 2rem;
+    border-radius: 4px;
+    margin: 3rem 0;
+  }
+
+  .price-section h2 {
+    color: #2ecc71;
+  }
+
+  .price {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2ecc71;
+    margin: 1rem 0;
+  }
+
+  .cta-section {
+    text-align: center;
+    background: #f0fdf4;
+    padding: 2rem;
+    border-radius: 4px;
+    border: 2px solid #2ecc71;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.2s;
+    margin-top: 1rem;
+  }
+
+  .cta-button:hover {
+    background: #27ae60;
+  }
+</style>

@@ -1,0 +1,40 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Get in touch with Paul."><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Contact - Paul Vudmaska</title><style>*,*:before,*:after{box-sizing:border-box;margin:0;padding:0}:root{--font-sans: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;--font-mono: "Fira Code", "JetBrains Mono", monospace;--max-width: 72rem;--gap: 1.5rem}html{font-family:var(--font-sans);line-height:1.6;-webkit-font-smoothing:antialiased}body{min-height:100dvh;display:flex;flex-direction:column;background:#0f1a2e;color:#e0e0e0}main{flex:1;width:100%;max-width:100%;margin:0 auto;padding:0}img,video,svg{max-width:100%;height:auto;display:block}a{color:inherit;text-decoration-thickness:1px;text-underline-offset:2px}header{background:linear-gradient(135deg,#0f1a2e,#1a2f4a);border-bottom:3px solid #ffd700;position:sticky;top:0;z-index:100}header nav{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-width);margin:0 auto;padding:1rem var(--gap)}header nav .site-name{font-weight:700;font-size:1.5rem;text-decoration:none;color:gold;letter-spacing:-.5px}header nav ul{display:flex;list-style:none;gap:1rem}header nav ul a{color:#e0e0e0;text-decoration:none;font-weight:600;transition:color .2s}header nav ul a:hover{color:gold}header nav ul a.active{background:linear-gradient(135deg,gold,#ffed4e);color:#0f1a2e;padding:.6rem 1.2rem;border-radius:24px;font-weight:700;transition:all .3s}header .hamburger{display:none;background:none;border:none;cursor:pointer;flex-direction:column;gap:6px;padding:8px}header .hamburger span{width:25px;height:3px;background:gold;border-radius:2px;transition:all .3s}header .hamburger.active span:nth-child(1){transform:rotate(45deg) translate(10px,10px)}header .hamburger.active span:nth-child(2){opacity:0}header .hamburger.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px)}@media(max-width:768px){header .hamburger{display:flex}header nav ul{position:absolute;top:100%;left:0;right:0;flex-direction:column;background:linear-gradient(135deg,#0f1a2e,#1a2f4a);border-bottom:2px solid #ffd700;gap:0;max-height:0;overflow:hidden;transition:max-height .3s}header nav ul.active{max-height:300px}header nav ul li{padding:1rem 2rem;border-bottom:1px solid #333}header nav ul a{display:block}header nav ul a.active{background:linear-gradient(135deg,gold,#ffed4e);color:#0f1a2e;padding:.6rem 1.2rem;margin:0 .5rem;border-radius:24px}header nav ul .cta-link a{color:gold;font-weight:700}}footer{text-align:center;padding:2rem var(--gap);color:#b0b0b0;border-top:2px solid #ffd700;font-size:.875rem}.prose{max-width:65ch;margin:0 auto}.prose h1,.prose h2,.prose h3{margin-top:2rem;margin-bottom:.5rem;line-height:1.3}.prose p{margin-bottom:1rem}section{max-width:1200px;margin-left:auto;margin-right:auto}
+h1[data-astro-cid-uw5kdbxl]{text-align:center;margin-bottom:2rem;font-size:2.5rem}.content[data-astro-cid-uw5kdbxl]{max-width:600px;margin:0 auto}.contact-form[data-astro-cid-uw5kdbxl]{background:#f9f9f9;padding:2rem;border-radius:8px;border:2px solid #3498db}.form-group[data-astro-cid-uw5kdbxl]{margin-bottom:1.5rem}.form-group[data-astro-cid-uw5kdbxl] label[data-astro-cid-uw5kdbxl]{display:block;margin-bottom:.5rem;font-weight:600;color:#3498db}.form-group[data-astro-cid-uw5kdbxl] input[data-astro-cid-uw5kdbxl],.form-group[data-astro-cid-uw5kdbxl] textarea[data-astro-cid-uw5kdbxl]{width:100%;padding:.75rem;border:2px solid #e0e0e0;border-radius:4px;font-size:1rem;font-family:inherit;transition:all .2s;box-sizing:border-box}.form-group[data-astro-cid-uw5kdbxl] input[data-astro-cid-uw5kdbxl]:focus,.form-group[data-astro-cid-uw5kdbxl] textarea[data-astro-cid-uw5kdbxl]:focus{outline:none;border-color:#3498db;box-shadow:0 0 0 3px #3498db1a}.submit-button[data-astro-cid-uw5kdbxl]{width:100%;padding:1rem;background:#3498db;color:#fff;border:none;border-radius:4px;font-size:1.1rem;font-weight:600;cursor:pointer;transition:background .2s;text-transform:uppercase;letter-spacing:.5px}.submit-button[data-astro-cid-uw5kdbxl]:hover{background:#2980b9}.status-message[data-astro-cid-uw5kdbxl]{margin-top:1rem;padding:1rem;border-radius:4px;text-align:center;display:none}.status-message[data-astro-cid-uw5kdbxl].sending{display:block;background:#ecf0f1;color:#2c3e50}.status-message[data-astro-cid-uw5kdbxl].success{display:block;background:#d5f4e6;color:#27ae60}.status-message[data-astro-cid-uw5kdbxl].error{display:block;background:#fadbd8;color:#c0392b}
+</style></head> <body> <header> <nav class="navbar"> <a href="/" class="site-name">Voody</a> <button class="hamburger" aria-label="Toggle menu"> <span></span> <span></span> <span></span> </button> <ul class="nav-menu"> <li><a href="./">Home</a></li><li><a href="./contact/">Contact</a></li> <li class="cta-link"><a href="./#contact-form">Get Quote</a></li> </ul> </nav> </header> <script>
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (hamburger && navMenu) {
+    hamburger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      hamburger.classList.toggle('active');
+    });
+
+    // Close menu when link clicked
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+      });
+    });
+  }
+
+  // Highlight active nav link
+  function setActiveLink() {
+    const currentPath = window.location.pathname;
+    const navLinks = document.querySelectorAll('.nav-menu a:not(.cta-link a)');
+    
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href');
+      // Match if href is current path or if home (/) and we're at root
+      if (href === currentPath || (href === '/' && currentPath.match(/^\/(solerify|larify)\/?$/))) {
+        link.classList.add('active');
+      } else {
+        link.classList.remove('active');
+      }
+    });
+  }
+
+  setActiveLink();
+  window.addEventListener('popstate', setActiveLink);
+</script> <main>   <h1 data-astro-cid-uw5kdbxl>Let's Talk</h1> <article class="content" data-astro-cid-uw5kdbxl> <form class="contact-form" id="contactForm" data-astro-cid-uw5kdbxl> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="name" data-astro-cid-uw5kdbxl>Your Name</label> <input type="text" id="name" name="name" required data-astro-cid-uw5kdbxl> </div> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="email" data-astro-cid-uw5kdbxl>Your Email</label> <input type="email" id="email" name="email" required data-astro-cid-uw5kdbxl> </div> <div class="form-group" data-astro-cid-uw5kdbxl> <label for="message" data-astro-cid-uw5kdbxl>Message</label> <textarea id="message" name="message" rows="6" required placeholder="What's on your mind?" data-astro-cid-uw5kdbxl></textarea> </div> <button type="submit" class="submit-button" data-astro-cid-uw5kdbxl>Send</button> <div id="status" class="status-message" data-astro-cid-uw5kdbxl></div> </form> </article>   </main> <footer> <p>© 2026 Voody.</p> </footer> </body></html> <script type="module">const a=document.getElementById("contactForm"),e=document.getElementById("status");a?.addEventListener("submit",async n=>{n.preventDefault(),e.textContent="Sending...",e.className="status-message sending";const t=new FormData(a),r={name:t.get("name"),email:t.get("email"),message:t.get("message")};try{const s=await fetch("/send-email",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(r)});if(s.ok)e.textContent="Message sent! Thanks for reaching out.",e.className="status-message success",a.reset();else{const o=await s.text();e.textContent="Error sending message. Please try again.",e.className="status-message error"}}catch{e.textContent="Error sending message. Please try again.",e.className="status-message error"}});</script> 

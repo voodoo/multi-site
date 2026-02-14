@@ -1,0 +1,19 @@
+---
+import BaseLayout from '../../shared/layouts/BaseLayout.astro';
+import Header from '../../shared/components/Header.astro';
+import Footer from '../../shared/components/Footer.astro';
+
+const siteName = 'My Site';
+const nav = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+  { label: 'Blog', href: '/blog' },
+];
+---
+
+<BaseLayout title={siteName} description="Welcome to my site">
+  <Header slot="header" siteName={siteName} nav={nav} />
+  <h1>Welcome</h1>
+  <p>This is a new site built from the multi-site template.</p>
+  <Footer slot="footer" />
+</BaseLayout>

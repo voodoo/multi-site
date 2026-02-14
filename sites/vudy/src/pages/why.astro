@@ -1,0 +1,134 @@
+---
+import BaseLayout from '../../shared/layouts/BaseLayout.astro';
+import Header from '../../shared/components/Header.astro';
+import Footer from '../../shared/components/Footer.astro';
+
+const siteName = 'Vudy';
+const nav = [
+  { label: 'Home', href: './' },
+  { label: 'The Package', href: './package/' },
+  { label: 'Why Vudy', href: './why/' },
+  { label: 'Contact', href: './contact/' },
+];
+---
+
+<BaseLayout title="Why Vudy? - Energy Independence Simplified" description="Why choose Vudy for your LFP battery and solar system.">
+  <Header slot="header" siteName={siteName} nav={nav} />
+
+  <h1>Why Vudy?</h1>
+
+  <article class="content">
+    <h2>One Complete Package</h2>
+    <p>
+      No guessing. No compromises. No "you need to buy this and that separately." 
+      We give you everything: 32kWh of LFP batteries, 800W of solar, and a complete electrical system. 
+      One package. One price. Done.
+    </p>
+
+    <h2>Built by Someone Who Gets It</h2>
+    <p>
+      Vudy isn't owned by a corporation. It's built by someone who believes in energy independence. 
+      Someone who understands what it means to own your own power. That changes everything.
+    </p>
+
+    <h2>LFP Technology, Not Outdated Lead-Acid</h2>
+    <p>
+      Old lead-acid batteries need constant maintenance, waste energy, and die after 5-7 years. 
+      LFP is different. It's safer, more efficient, and lasts 20+ years. We use the best technology available.
+    </p>
+
+    <h2>32kWh Is Real Power</h2>
+    <p>
+      32kWh isn't a marketing number. It's enough to power an average household for a full day 
+      (depending on usage). Combined with 800W of solar, you have a system that works year-round.
+    </p>
+
+    <h2>800W Solar Is Proven</h2>
+    <p>
+      Not oversized marketing. Not undersized penny-pinching. 800W solar is the sweet spot: 
+      It charges your 32kWh battery reliably while being cost-effective and installable on most properties.
+    </p>
+
+    <h2>Professional Installation Included</h2>
+    <p>
+      We don't sell you hardware and wish you luck. We install it. We certify it. 
+      We make sure it works. You get a system you can trust.
+    </p>
+
+    <h2>Long-Term Support</h2>
+    <p>
+      10-year warranty. Annual maintenance. 24/7 support. We're here when you need us. 
+      This isn't a one-time transaction—it's a relationship.
+    </p>
+
+    <h2>Energy Independence Actually Works</h2>
+    <p>
+      With Vudy, you stop paying electricity bills. You stop depending on the grid. 
+      You generate your own power. You store it. You use it. That's freedom.
+    </p>
+
+    <h2>Simple. Direct. Honest.</h2>
+    <p>
+      No upselling. No complicated financing. No hidden fees. One package. One price. 
+      Everything you need. Nothing you don't.
+    </p>
+
+    <div class="cta-section">
+      <h2>Ready to Get Off the Grid?</h2>
+      <p>Contact us. Let's talk about your energy independence.</p>
+      <a href="./contact/" class="cta-button">Get Started</a>
+    </div>
+  </article>
+
+  <Footer slot="footer" copyright="© 2026 Vudy. Energy Independence." />
+</BaseLayout>
+
+<style>
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+  }
+
+  .content {
+    max-width: 700px;
+    margin: 0 auto 4rem;
+    line-height: 1.8;
+  }
+
+  .content h2 {
+    color: #2ecc71;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+
+  .content p {
+    margin-bottom: 1rem;
+    color: #333;
+  }
+
+  .cta-section {
+    text-align: center;
+    background: #f0fdf4;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-top: 2rem;
+    border: 2px solid #2ecc71;
+  }
+
+  .cta-button {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: #2ecc71;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background 0.2s;
+  }
+
+  .cta-button:hover {
+    background: #27ae60;
+  }
+</style>
